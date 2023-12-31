@@ -3,13 +3,14 @@ from pytube import YouTube
 import datetime
 import time
 import os
+
 if __name__ == '__main__':
-    video_url = 'https://www.youtube.com/watch?v=gk0Cf3h0oOk'
+    video_url = input('input yt : ')
     video = YouTube(url=video_url)
     video_time = datetime.datetime.fromtimestamp(float(video.length))
     video_path = video.streams.get_highest_resolution().download()
     print("VIDEO IS READY :)")
-    new_year_time = datetime.datetime.strptime('2023-01-05 01:05:59','%Y-%m-%d %H:%M:%S') - datetime.datetime.now()
+    new_year_time = datetime.datetime.strptime('2024-01-01 00:00:00','%Y-%m-%d %H:%M:%S') - datetime.datetime.now()
     start_hour = 0
     start_minute = 2
     start_second = 12
